@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Артём Корякин](https://up.htmlacademy.ru/adaptive-individual/2/user/2312385).
-* Наставник: [Виктория Никитина](https://github.com/vikitina).
+* Наставник: .
 
 ---
 
