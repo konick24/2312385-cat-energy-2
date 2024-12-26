@@ -1,7 +1,31 @@
 /* GLOBAL */
 @import "./common/variables.scss";
-@import "./common/global.scss";
+@import "./common/mixins.scss";
 @import "./common/fonts.scss";
+@import "./common/global.scss";
+@import "./common/visually-hidden.scss";
 
 /* BLOCKS */
+@import "./blocks/button.scss";
+@import "./blocks/page.scss";
 @import "./blocks/page-header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/site-list.scss";
+@import "./blocks/page-main.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/programs.scss";
+@import "./blocks/process.scss";
+@import "./blocks/example.scss";
+@import "./blocks/page-footer.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/social.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/product.scss";
+@import "./blocks/show-more.scss";
+@import "./blocks/additionally.scss";
+@import "./blocks/additionally-item.scss";
+@import "./blocks/offer.scss";
+@import "./blocks/stocks.scss";
+@import "./blocks/stocks-form.scss";

@@ -21,11 +21,11 @@
         <img class="logo__icon" src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Cat-Energy">
       </picture>
     </a>
-    <nav class="page-header__nav">
-      <button class="page-header__button" type="button">
+    <nav class="page-header__nav nav">
+      <button class="nav__button" type="button">
         <span class="visually-hidden">Открыть меню сайта</span>
       </button>
-      <ul class="page-header__list site-list">
+      <ul class="nav__list site-list">
         <li class="site-list__item">
           <a class="site-list__link" href="#">Главная</a>
         </li>
@@ -101,12 +101,20 @@
         </dl>
         <p class="example__spending">
           <span class="example__expenses">Затраты на питание:</span>
-          <span class="example__total">15 000 РУБ.</span>
+          <span class="example__total">15 000 руб.</span>
         </p>
       </div>
-      <div class="example__view">
-        <img class="example__pic" src="#" width="280" height="256" alt="#">
-        <img class="example__pic" src="#" width="280" height="256" alt="#">
+      <div class="example__view" style="width: 280px; height: 256px;">
+        <div hidden>
+          <picture>
+            <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="./images/cat-before-large@1x.png 1x, ./images/cat-before-large@2x.png 2x">
+            <img class="example__pic" src="./images/cat-before-small@1x.png" width="280" height="256" srcset="./images/cat-before-small@2x.png 2x" alt="Вид кота 'До'">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="./images/cat-after-large@1x.png 1x, ./images/cat-after-large@2x.png 2x">
+            <img class="example__pic" src="./images/cat-after-small@1x.png" width="280" height="256" srcset="./images/cat-after-small@2x.png 2x" alt="Вид кота 'После'">
+          </picture>
+        </div>
       </div>
     </section>
   </main>
