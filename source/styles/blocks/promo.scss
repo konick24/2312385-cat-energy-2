@@ -1,13 +1,19 @@
 .promo {
-  padding: 27px 0 20px;
-  color: #ffffff;
-  background-image:
-    url("../../images/bg-promo-cat-mobile@1x.png"),
-    linear-gradient(to right, #63a73c, #61a53a);
-  background-repeat: no-repeat;
-  background-size: 320px 302px, auto 302px;
-  background-position: 50% 0;
-  box-shadow: inset 0 -198px 0 0 #ffffff;
+  @media (max-width: $width-only-mobile) {
+    padding: 27px 0 20px;
+    color: #ffffff;
+    background-image:
+      url("../../images/bg-promo-cat-mobile@1x.png"),
+      linear-gradient(to right, #63a73c, #61a53a);
+    background-repeat: no-repeat;
+    background-size: 320px 302px, auto 302px;
+    background-position: 50% 0;
+    box-shadow: inset 0 -198px 0 0 #ffffff;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/bg-promo-cat-mobile@2x.png");
+    }
+  }
 }
 // #63a73c
 .promo__heading {
