@@ -1,7 +1,28 @@
 .copyright {
+  display: block;
+  position: relative;
   font-family: $secondary-text;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
   color: $text-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 27px;
+    height: 34px;
+    mask-image: url("../../icons/stack.svg#icon-html-academy");
+    background-color: #666666;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:hover::after {
+    background-color: $basic-green;
+  }
 }

@@ -1,0 +1,31 @@
+.social {
+  padding-top: 84px;
+  background-image: url("../../icons/stack.svg#logo-cat-energy");
+  background-repeat: no-repeat;
+  background-size: 128px 24px;
+  background-position: 50% 40px;
+}
+
+.social__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+  background-color: #666666;
+
+  &--vk {
+    mask-image: url("../../icons/stack.svg#vk");
+    mask-size: 27px 17px;
+  }
+
+  &--youtube {
+    mask-image: url("../../icons/stack.svg#youtube");
+    mask-size: 24px 19px;
+  }
+
+  &--telegram {
+    mask-image: url("../../icons/stack.svg#telegram");
+    mask-size: 20px 17px;
+  }
+}
