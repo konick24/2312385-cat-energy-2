@@ -1,3 +1,42 @@
 .process__list {
+  margin: 0;
+  padding: 0;
   font-family: $secondary-text;
+}
+
+.process__item {
+  position: relative;
+  margin-left: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-color: $basic_green;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &--leaf::before {
+    background-image: url("../../icons/stack.svg#icon-leaf");
+    background-size: 25px 28px;
+  }
+
+  &--cup::before {
+    background-image: url("../../icons/stack.svg#icon-cup");
+    background-size: 26px 29px;
+  }
+
+  &--eat::before {
+    background-image: url("../../icons/stack.svg#icon-eat");
+    background-size: 25px 30px;
+  }
+
+  &--time::before {
+    background-image: url("../../icons/stack.svg#icon-time");
+    background-size: 26px 31px;
+  }
 }

@@ -1,0 +1,48 @@
+.nav {
+  position: absolute;
+  width: 100%;
+  top: 65px;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.nav__button {
+  position: absolute;
+  top: -45px;
+  right: 17px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: #ffffff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  &--opened::before {
+    box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+  }
+
+  &--closed::before {
+    top: 10px;
+    left: 0;
+    transform: rotate(45deg);
+  }
+
+  &--closed::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+    transform: rotate(-47deg);
+  }
+}

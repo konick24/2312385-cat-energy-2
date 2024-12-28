@@ -1,10 +1,26 @@
 .site-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+
+  &--opened {
+    display: block;
+  }
+}
+
+.site-list__item {
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .site-list__link {
+  display: block;
+  padding: 22px 0 23px;
   text-decoration: none;
   color: #000000;
 }

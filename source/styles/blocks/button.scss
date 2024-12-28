@@ -1,8 +1,11 @@
 .button {
+  display: block;
+  padding: 10px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   color: #ffffff;
   background-color: $basic_green;
 }

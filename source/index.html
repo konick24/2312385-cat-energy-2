@@ -14,51 +14,60 @@
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo logo" href="#">
-      <picture>
-        <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="./images/logo-desktop.svg">
-        <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="./images/logo-tablet.svg">
-        <img class="logo__icon" src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Cat-Energy">
-      </picture>
-    </a>
-    <nav class="page-header__nav nav">
-      <button class="nav__button" type="button">
-        <span class="visually-hidden">Открыть меню сайта</span>
-      </button>
-      <ul class="nav__list site-list">
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">Главная</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="./catalog.html">Каталог продукции</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="page-header__container container">
+      <a class="page-header__logo logo" href="#">
+        <picture>
+          <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="./images/logo-desktop.svg">
+          <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="./images/logo-tablet.svg">
+          <img class="logo__icon" src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Cat-Energy">
+        </picture>
+      </a>
+      <nav class="page-header__nav nav">
+        <button class="nav__button nav__button--opened" type="button">
+          <span class="visually-hidden">Открыть меню сайта</span>
+        </button>
+        <ul class="nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="./catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="page-main">
     <section class="page-main__section promo">
-      <h1 class="page-main__heading promo__heading">Функциональное питание для котов</h1>
-      <p class="promo__text">Занялся собой? Займись котом!</p>
-      <a class="promo__button button" href="#">Подобрать программу</a>
+      <div class="page-main__conrainer container">
+        <h1 class="page-main__heading promo__heading">Функциональное питание для котов</h1>
+        <p class="promo__text">Занялся собой? Займись котом!</p>
+        <picture>
+          <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="./images/bg-promo-eat-desktop@1x.png 1x, ./images/bg-promo-eat-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="./images/bg-promo-eat-tablet@1x.png 1x, ./images/bg-promo-eat-tablet@2x.png 2x">
+          <img class="promo__pic" src="./images/bg-promo-eat-mobile@1x.png" width="280" height="270" srcset="./images/bg-promo-eat-mobile@2x.png 2x" alt="Питание для котов Cat-Energy">
+        </picture>
+        <a class="promo__button button" href="#">Подобрать программу</a>
+      </div>
     </section>
     <section class="page-main__section programs">
       <h2 class="visually-hidden">Программы питания</h2>
-      <article class="programs__item">
+      <article class="programs__item programs__item--slim">
         <h3 class="programs__title">Похудение</h3>
         <p class="programs__text">
           Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
         </p>
-        <a class="programs__button" href="#">Каталог slim</a>
+        <a class="programs__button button" href="#">Каталог slim</a>
       </article>
-      <article class="programs__item">
+      <article class="programs__item programs__item--pro">
         <h3 class="programs__title">Набор массы</h3>
         <p class="programs__text">
           Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
         </p>
-        <a class="programs__button" href="#">Каталог pro</a>
+        <a class="programs__button button" href="#">Каталог pro</a>
       </article>
     </section>
     <section class="page-main__section process">
@@ -128,23 +137,27 @@
         <span class="contacts__street">ул. Большая Конюшенная, д. 19/8</span>
         <span class="contacts__city">Санкт-Петербург</span>
       </p>
-      <img class="contacts__pic" src="#" width="768" height="400" alt="">
+      <picture>
+        <source media="(min-width: 1440px)" width="1440" height="400" type="image/png" srcset="./images/location-desktop@1x.png 1x, ./images/location-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" width="768" height="400" type="image/png" srcset="./images/location-tablet@1x.png 1x, ./images/location-tablet@2x.png 2x">
+        <img class="contacts__pic" src="./images/location-mobile@1x.png" srcset="./images/location-mobile@2x.png 2x" width="768" height="400" alt="">
+      </picture>
     </section>
     <section class="page-footer__section social">
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link" href="#">
+          <a class="social__link social__link--vk" href="#">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#">
+          <a class="social__link social__link--youtube" href="#">
             <span class="visually-hidden">YouTube</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#">
+          <a class="social__link social__link--telegram" href="#">
             <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
@@ -155,6 +168,7 @@
       </a>
     </section>
   </footer>
+  <script src="./scripts/nav.js"></script>
 </body>
 
 </html>
