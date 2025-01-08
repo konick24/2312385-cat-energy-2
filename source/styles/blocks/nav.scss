@@ -3,7 +3,15 @@
   width: 100%;
   top: 65px;
   left: 0;
-  background-color: #ffffff;
+
+  @media (min-width: $width-tablet) {
+    position: static;
+    width: 460px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 475px;
+  }
 }
 
 .nav__button {
@@ -44,5 +52,9 @@
     height: 2px;
     background-color: #000000;
     transform: rotate(-47deg);
+  }
+
+  @media (min-width: $width-tablet) {
+    display: none;
   }
 }

@@ -1,37 +1,87 @@
 .promo {
   @media (max-width: $width-only-mobile) {
+    text-align: center;
     padding: 27px 0 20px;
     color: #ffffff;
     background-image:
+      url("../../images/bg-promo-eat-mobile@1x.png"),
       url("../../images/bg-promo-cat-mobile@1x.png"),
       linear-gradient(to right, #63a73c, #61a53a);
     background-repeat: no-repeat;
-    background-size: 320px 302px, auto 302px;
-    background-position: 50% 0;
-    box-shadow: inset 0 -198px 0 0 #ffffff;
+    background-size: 280px 270px, 320px 302px, auto 302px;
+    background-position: 0 64%, 0 0, 50% 0;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../images/bg-promo-cat-mobile@2x.png");
+      background-image:
+        url("../../images/bg-promo-eat-mobile@2x.png"),
+        url("../../images/bg-promo-cat-mobile@2x.png"),
+        linear-gradient(to right, #63a73c, #61a53a);
+    }
+  }
+
+  @media (min-width: $width-tablet) {
+    background-image: url("../../images/bg-promo-eat-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-size: 709px 609px;
+    background-position: 0 90%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/bg-promo-eat-tablet@2x.png"),;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 143px;
+    background-image:
+      url("./images/bg-promo-eat-desktop@1x.png"),
+      url("../../images/bg-promo-cat-desktop@1x.png"),
+      linear-gradient(to right, #ffffff 50%, #64a73c 50%);
+    background-repeat: no-repeat;
+    background-position: 100% 0, 0 0;
+    background-size: 552px 499px, 720px 694px, auto auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../../images/bg-promo-cat-desktop@2x.png"),
+        linear-gradient(to right, #ffffff 50%, #64a73c 50%);
     }
   }
 }
-// #63a73c
+
+.promo__container {
+  height: 410px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $width-tablet) {
+    height: 810px;
+    padding-left: 90px;
+  }
+}
+
 .promo__heading {
   margin: 0;
   margin-bottom: 25px;
-  padding: 0 15px;
-  text-align: center;
   color: #ffffff;
+
+  @media (min-width: $width-tablet) {
+    width: 510px;
+    color: #000000;
+  }
 }
 
 .promo__text {
   margin: 0;
   margin-bottom: 29px;
   line-height: 14px;
-  text-align: center;
   text-transform: uppercase;
 }
 
 .promo__button {
   margin-top: auto;
+
+  @media (min-width: $width-tablet) {
+    margin: 0;
+    width: 242px;
+  }
 }

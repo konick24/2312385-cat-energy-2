@@ -8,4 +8,27 @@
     background-position: 50% 46%;
     background-size: 101px 18px;
   }
+
+  @media (min-width: $width-tablet) {
+    padding: 25px 0 65px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 0;
+  }
+}
+
+.page-header__container {
+  @media (min-width: $width-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $width-desktop) {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+  }
 }
