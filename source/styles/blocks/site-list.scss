@@ -16,7 +16,8 @@
 
   @media (min-width: $width-tablet) {
     display: flex;
-    gap: 25px;
+    justify-content: end;
+    gap: 26px;
     flex-wrap: wrap;
     font-size: 18px;
     line-height: 24px;
@@ -24,6 +25,9 @@
   }
 
   @media (min-width: $width-desktop) {
+    font-size: 20px;
+    line-height: 30px;
+    gap: 34px;
     background-color: transparent;
   }
 }
@@ -42,14 +46,27 @@
   text-decoration: none;
   color: #000000;
 
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:focus {
+    outline: none;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
   @media (min-width: $width-tablet) {
     position: relative;
-    padding: 10px 4px;
+    padding: 14px 4px 12px;
 
     &--current::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: 2px;
       left: 4px;
       right: 4px;
       height: 2px;
@@ -59,11 +76,12 @@
 
   @media (min-width: $width-desktop) {
     color: #ffffff;
-    padding: 10px 0;
+    padding: 16px 0 13px;
 
     &--current::after {
       left: 0;
       right: 0;
+      bottom: 5px;
       background-color: #ffffff;
     }
   }

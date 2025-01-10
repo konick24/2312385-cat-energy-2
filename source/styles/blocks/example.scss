@@ -1,21 +1,118 @@
+.example {
+  padding: 25px 0 40px;
+  background-color: #eaeaea;
+
+  @media (min-width: $width-tablet) {
+    background-color: #ffffff;
+  }
+}
+
+.example__container {
+  @media (min-width: $width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.example__content {
+  @media (min-width: $width-tablet) {
+    display: grid;
+    grid-template-columns: 367px 1fr;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-right: 137px;
+  }
+}
+
+.example__heading {
+  line-height: 40px;
+  margin-bottom: 40px;
+
+  @media (min-width: $width-tablet) {
+    grid-column: 1 / -1;
+    line-height: 60px;
+  }
+}
+
 .example__text {
+  margin: 0;
+  margin-bottom: 20px;
   font-family: $secondary-text;
+
+  @media (min-width: $width-tablet) {
+    grid-column: 1 / -1;
+  }
+}
+
+.example__list {
+  margin: 0;
+  margin-bottom: 19px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 32px;
+
+  @media (min-width: $width-tablet) {
+    grid-column: 1 / 2;
+  }
+
+  @media (min-width: $width-desktop) {
+    grid-column: 1 / -1;
+  }
+}
+
+.example__item {
+  display: grid;
+  align-items: center;
+  text-align: center;
 }
 
 .example__title {
+  padding: 0 3px;
+  width: 87px;
+  margin-top: -9px;
+  justify-self: center;
   font-family: $secondary-text;
   font-size: 12px;
   line-height: 12px;
   text-transform: lowercase;
+  background-color: #eaeaea;
+  order: 1;
+
+  @media (min-width: $width-tablet) {
+    background-color: #ffffff;
+  }
 }
 
 .example__definition {
+  margin: 0;
+  padding: 14px 10px 16px;
   font-size: 24px;
   line-height: 24px;
   color: #000000;
+  text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .example__spending {
+  margin: 0;
+  margin-bottom: 20px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $width-tablet) {
+    grid-column: 2 / -1;
+  }
+
+  @media (min-width: $width-desktop) {
+    grid-column: 1 / -1;
+  }
+}
+
+.example__view {
+  background-color: $basic-grey;
 }

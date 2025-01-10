@@ -5,7 +5,7 @@
   @media (max-width: $width-only-mobile) {
     background-image: url("../../images/logo-text-mobile.svg");
     background-repeat: no-repeat;
-    background-position: 50% 46%;
+    background-position: 50% 50%;
     background-size: 101px 18px;
   }
 
@@ -22,7 +22,7 @@
   @media (min-width: $width-tablet) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
   }
 
   @media (min-width: $width-desktop) {
