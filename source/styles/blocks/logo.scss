@@ -1,0 +1,21 @@
+.logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus:not(:active) {
+    outline: none;
+    opacity: 0.8;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 0.6;
+  }
+}
+
+.logo__icon {
+  @media (min-width: $width-tablet) {
+    display: block;
+  }
+}

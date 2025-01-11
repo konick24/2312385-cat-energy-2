@@ -1,21 +1,64 @@
+.programs {
+
+  padding-bottom: 20px;
+
+  @media (min-width: $width-tablet) {
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 82px;
+    padding-bottom: 71px;
+  }
+}
+
+.programs__container {
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: $width-tablet) {
+    gap: 30px;
+  }
+
+  @media (min-width: $width-desktop) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.programs__item {
+  padding: 30px 20px 12px;
+  background-color: $basic-grey;
+
+  @media (min-width: $width-tablet) {
+    padding: 77px 316px 46px 52px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 77px 61px 47px 52px;
+  }
+}
+
 .programs__title {
+  margin: 0;
   margin-left: 70px;
+  margin-bottom: 29px;
   position: relative;
   color: #000000;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 37px;
   text-transform: uppercase;
   font-weight: 400;
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -6px;
     left: -70px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: $basic_green;
+    background-color: $basic-green;
   }
 
   &::after {
@@ -25,8 +68,8 @@
   }
 
   .programs__item--slim &::after {
-    top: -3;
-    left: -62px;
+    top: -9px;
+    left: -63px;
     width: 36px;
     height: 50px;
     background-image: url("../../icons/stack.svg#icon-cat-slim");
@@ -34,25 +77,143 @@
   }
 
   .programs__item--pro &::after {
-    top: 12px;
-    left: -77px;
+    top: 5px;
+    left: -78px;
     width: 67px;
     height: 28px;
     background-image: url("../../icons/stack.svg#icon-cat-pro");
     background-size: 67px 28px;
   }
+
+  @media (min-width: $width-tablet) {
+    margin-left: 0;
+    margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      top: 15px;
+      left: 393px;
+      width: 200px;
+      height: 200px;
+    }
+
+    .programs__item--slim &::after {
+      top: 4px;
+      left: 423px;
+      width: 140px;
+      height: 194px;
+      background-size: 140px 194px;
+    }
+
+    .programs__item--pro &::after {
+      top: 58px;
+      left: 359px;
+      width: 268px;
+      height: 112px;
+      background-size: 268px 112px;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-left: 162px;
+    margin-bottom: 73px;
+
+    &::before {
+      top: -30px;
+      left: -162px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .programs__item--slim &::after {
+      top: -35px;
+      left: -147px;
+      width: 70px;
+      height: 97px;
+      background-size: 70px 97px;
+    }
+
+    .programs__item--pro &::after {
+      top: -10px;
+      left: -180px;
+      width: 134px;
+      height: 56px;
+      background-size: 134px 56px;
+    }
+  }
 }
 
 .programs__text {
+  margin: 0;
+  padding-bottom: 22px;
   font-family: $secondary-text;
+
+  @media (max-width: $width-only-mobile) {
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  @media (min-width: $width-tablet) {
+    padding-bottom: 34px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 10px;
+  }
 }
 
 
 .programs__button {
+  width: max-content;
+  display: grid;
+  grid-template-columns: max-content 26px;
+  gap: 16px;
+  align-items: center;
+  padding: 10px 0;
+  margin-top: 9px;
   line-height: 16px;
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
   background-color: initial;
   text-align: left;
+
+  &::after {
+    content: "";
+    width: 24px;
+    height: 10px;
+    background-image: url("../../icons/stack.svg#icon-arrow");
+    background-repeat: no-repeat;
+    background-size: 32px 12px;
+    background-position: 100% 50%;
+  }
+
+  &:hover {
+    grid-template-columns: max-content 32px;
+    background-color: transparent;
+
+    &::after {
+      width: 32px;
+    }
+  }
+
+  &:focus {
+    grid-template-columns: max-content 32px;
+    background-color: transparent;
+
+    &::after {
+      width: 32px;
+    }
+  }
+
+  &:active {
+    color: #000000;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+    gap: 25px;
+  }
 }

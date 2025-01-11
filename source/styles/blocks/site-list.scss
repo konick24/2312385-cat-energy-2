@@ -8,14 +8,36 @@
   text-transform: uppercase;
   text-align: center;
   border-top: 1px solid #e6e6e6;
+  background-color: #ffffff;
 
   &--opened {
     display: block;
+  }
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    justify-content: end;
+    gap: 26px;
+    flex-wrap: wrap;
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+  }
+
+  @media (min-width: $width-desktop) {
+    font-size: 20px;
+    line-height: 30px;
+    gap: 34px;
+    background-color: transparent;
   }
 }
 
 .site-list__item {
   border-bottom: 1px solid #e6e6e6;
+
+  @media (min-width: $width-tablet) {
+    border: none;
+  }
 }
 
 .site-list__link {
@@ -23,4 +45,44 @@
   padding: 22px 0 23px;
   text-decoration: none;
   color: #000000;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:focus {
+    outline: none;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  @media (min-width: $width-tablet) {
+    position: relative;
+    padding: 14px 4px 12px;
+
+    &--current::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 4px;
+      right: 4px;
+      height: 2px;
+      background-color: $basic-green;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    color: #ffffff;
+    padding: 16px 0 13px;
+
+    &--current::after {
+      left: 0;
+      right: 0;
+      bottom: 5px;
+      background-color: #ffffff;
+    }
+  }
 }
