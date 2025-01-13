@@ -19,10 +19,12 @@
   }
 
   @media (min-width: $width-desktop) {
+    margin: 0 auto;
+    width: $width-desktop;
     padding-top: 224px;
     background-image:
       url("../../images/bg-promo-cat-desktop@1x.png"),
-      linear-gradient(to right, #ffffff 50%, #64a73c 50%);
+      linear-gradient(to right, #ffffff 50%, #1e221b 50%);
     background-repeat: no-repeat;
     background-position: 100% 0, 0 0;
     background-size: 720px 694px, auto auto;

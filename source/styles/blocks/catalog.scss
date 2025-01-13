@@ -1,0 +1,11 @@
+.catalog__container {
+  @media (max-width: $width-only-mobile) {
+    margin: 0;
+  }
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
