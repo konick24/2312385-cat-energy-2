@@ -19,9 +19,9 @@
   }
 
   @media (min-width: $width-desktop) {
-    margin: 0 auto;
+    margin: -143px auto 0;
     width: $width-desktop;
-    padding-top: 224px;
+    padding: 145px 0 39px;
     background-image:
       url("../../images/bg-promo-cat-desktop@1x.png"),
       linear-gradient(to right, #ffffff 50%, #1e221b 50%);
@@ -44,12 +44,15 @@
   @media (min-width: $width-tablet) {
     position: relative;
     min-height: 810px;
+    padding-top: 40px;
     padding-left: 90px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $width-desktop) {
-    min-height: 470px;
+    padding-top: 80px;
     padding-left: 80px;
+    min-height: 470px;
   }
 }
 
@@ -60,7 +63,13 @@
 
   @media (min-width: $width-tablet) {
     margin-bottom: 40px;
-    width: 510px;
+    width: 72%;
+    color: #000000;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 40px;
+    width: 45%;
     color: #000000;
   }
 }
@@ -73,6 +82,7 @@
 
   @media (min-width: $width-tablet) {
     margin-bottom: 50px;
+    width: 72%;
     font-size: 20px;
     line-height: 20px;
   }
@@ -85,18 +95,20 @@
 .promo__pic {
   @media (min-width: $width-tablet) {
     position: absolute;
+    margin: 0 auto;
     width: 709px;
     height: 609px;
-    top: 201px;
+    top: 241px;
     left: 0;
+    right: 0;
     z-index: -1;
   }
 
   @media (min-width: $width-desktop) {
     width: 552px;
     height: 499px;
-    top: -81px;
-    left: 447px;
+    top: -2px;
+    left: 228px;
     z-index: 0;
   }
 }

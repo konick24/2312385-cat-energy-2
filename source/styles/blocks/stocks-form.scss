@@ -1,4 +1,18 @@
+.stocks-form__input {
+  padding: 13px 13px 11px;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  margin-bottom: 16px;
+}
+
 .stocks-form__button {
+  padding: 15px;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
   font-size: 20px;
   line-height: 26px;
   border: none;

@@ -93,14 +93,16 @@
 
     &::before {
       top: 15px;
-      left: 393px;
+      left: auto;
+      right: -253px;
       width: 200px;
       height: 200px;
     }
 
     .programs__item--slim &::after {
       top: 4px;
-      left: 423px;
+      left: auto;
+      right: -223px;
       width: 140px;
       height: 194px;
       background-size: 140px 194px;
@@ -108,7 +110,8 @@
 
     .programs__item--pro &::after {
       top: 58px;
-      left: 359px;
+      left: auto;
+      right: -287px;
       width: 268px;
       height: 112px;
       background-size: 268px 112px;

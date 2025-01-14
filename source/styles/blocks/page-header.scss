@@ -10,11 +10,11 @@
   }
 
   @media (min-width: $width-tablet) {
-    padding: 25px 0 65px;
+    padding: 25px 0;
   }
 
   @media (min-width: $width-desktop) {
-    padding: 0;
+    padding: 55px 0 29px;
   }
 }
 
@@ -25,10 +25,10 @@
     align-items: start;
   }
 
-  @media (min-width: $width-desktop) {
-    position: absolute;
-    top: 55px;
-    left: 0;
-    right: 0;
-  }
+  // @media (min-width: $width-desktop) {
+  //   position: absolute;
+  //   top: 55px;
+  //   left: 0;
+  //   right: 0;
+  // }
 }

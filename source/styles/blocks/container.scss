@@ -1,9 +1,31 @@
 .container {
   margin: 0 20px;
 
+  &--line {
+    $margin-line-mobile: -20px;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: $margin-line-mobile;
+      right: $margin-line-mobile;
+      height: 2px;
+      background-color: $basic-green;
+      z-index: -1;
+    }
+  }
+
+  &--line span {
+    margin-left: -40px;
+    padding: 0 40px;
+    background-color: #ffffff;
+  }
+
   @media (min-width: $width-tablet) {
-    margin: 0 auto;
-    width: 708px;
+    margin: 0 30px;
   }
 
   @media (min-width: $width-desktop) {
