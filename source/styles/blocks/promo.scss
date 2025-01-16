@@ -1,7 +1,5 @@
 .promo {
   @media (max-width: $width-only-mobile) {
-    text-align: center;
-    padding: 27px 0 20px;
     color: #ffffff;
     background-image:
       url("../../images/bg-promo-cat-mobile@1x.png"),
@@ -38,15 +36,14 @@
 }
 
 .promo__container {
+  padding: 27px 0 20px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: $width-tablet) {
     position: relative;
-    min-height: 810px;
-    padding-top: 40px;
-    padding-left: 90px;
-    margin-bottom: 40px;
+    min-height: 850px;
+    padding: 40px 0 40px 90px;
   }
 
   @media (min-width: $width-desktop) {
@@ -59,6 +56,7 @@
 .promo__heading {
   margin: 0;
   margin-bottom: 25px;
+  padding: 0;
   color: #ffffff;
 
   @media (min-width: $width-tablet) {

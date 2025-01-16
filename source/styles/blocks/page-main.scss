@@ -17,8 +17,11 @@
   }
 
   @media (min-width: $width-tablet) {
-    padding: 40px 30px 84px;
     font-size: 60px;
     line-height: 60px;
+
+    &--catalog {
+      padding: 40px 30px 84px;
+    }
   }
 }

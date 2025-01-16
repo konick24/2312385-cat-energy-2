@@ -2,6 +2,10 @@
   @media (max-width: $width-only-mobile) {
     margin: 0;
   }
+
+  @media (min-width: $width-tablet) {
+    padding-bottom: 74px;
+  }
 }
 
 .catalog__list {
