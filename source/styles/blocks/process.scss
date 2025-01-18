@@ -1,5 +1,15 @@
 .process {
+  @media (min-width: $width-tablet) {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+.process__container {
   padding-bottom: 47px;
+
+  @media (min-width: $width-tablet) {
+    padding-bottom: 64px;
+  }
 }
 
 .process__heading {
@@ -7,6 +17,7 @@
   margin-bottom: 42px;
 
   @media (min-width: $width-tablet) {
+    margin-bottom: 32px;
     line-height: 60px;
   }
 }
@@ -21,7 +32,8 @@
 
   @media (min-width: $width-tablet) {
     grid-template-columns: 1fr 1fr;
-    gap: 37px 58px;
+    gap: 53px 58px;
+    counter-reset: process;
   }
 
 
@@ -67,8 +79,33 @@
     background-image: url("../../icons/stack.svg#icon-time");
     background-size: 26px 31px;
   }
+
+  @media (min-width: $width-tablet) {
+    margin: 0;
+    padding: 151px 80px 40px 0;
+    counter-increment: process;
+
+    &::before {
+      top: 40px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      content: counter(process);
+      position: absolute;
+      background-size: contain;
+    }
+  }
 }
 
 .process__text {
   margin: 0;
+
+  @media (max-width: $width-only-mobile) {
+    & br {
+      display: none;
+    }
+  }
 }

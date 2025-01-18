@@ -5,8 +5,29 @@
   font-weight: 400;
   color: #000000;
 
+  &--catalog {
+    padding: 27px 20px 40px;
+  }
+
+  @media (max-width: $width-only-mobile) {
+    &--catalog {
+      border-top: 1px solid #d9d9d9;
+      border-bottom: 1px solid #ebebeb;
+    }
+  }
+
   @media (min-width: $width-tablet) {
     font-size: 60px;
     line-height: 60px;
+
+    &--catalog {
+      padding: 40px 30px 84px;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    &--catalog {
+      padding: 44px 110px 84px;
+    }
   }
 }

@@ -1,7 +1,73 @@
 .offer {
+  position: relative;
+  padding: 188px 55px 42px;
   font-family: $secondary-text;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   background-color: $basic-green;
+  background-image: url("../../images/bg-offer-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../icons/stack.svg#icon-gift");
+    color: #ffffff;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/bg-offer-mobile@2x.png");
+  }
+
+  @media (min-width: $width-tablet) {
+    padding: 70px 115px 69px 420px;
+    background-image: url("../../images/bg-offer-tablet@1x.png");
+
+    &::after {
+      margin: 0;
+      top: calc(50% - 41px);
+      left: 79px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/bg-offer-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 185px 42px 43px;
+    background-image: url("../../images/bg-offer-desktop@1x.png");
+
+    &::after {
+      margin: 0 auto;
+      top: 57px;
+      left: 0;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/bg-offer-desktop@2x.png");
+    }
+  }
+}
+
+.offer__text {
+  margin: 0;
+  text-align: center;
+
+  @media (min-width: $width-tablet) {
+    text-align: start;
+  }
+
+  @media (min-width: $width-desktop) {
+    text-align: center;
+  }
 }

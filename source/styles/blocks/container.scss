@@ -1,13 +1,45 @@
 .container {
   margin: 0 20px;
 
+  &--line::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $basic-green;
+    z-index: -1;
+  }
+
+  &--line span {
+    margin-left: -40px;
+    padding: 0 40px;
+    background-color: #ffffff;
+  }
+
   @media (min-width: $width-tablet) {
-    margin: 0 auto;
-    width: 708px;
+    margin: 0 30px;
+
+    &--line::after {
+      top: 14px;
+    }
+
+    &--line span {
+      margin-left: 0;
+    }
   }
 
   @media (min-width: $width-desktop) {
     margin: 0 auto;
     width: 1220px;
+
+    &--line::after {
+      top: 18px;
+    }
+
+    &--line span {
+      margin-left: -40px;
+    }
   }
 }
