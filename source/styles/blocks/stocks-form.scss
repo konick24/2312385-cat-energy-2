@@ -1,3 +1,15 @@
+.stocks-form {
+  @media (min-width: $width-tablet) {
+    padding: 0 38px;
+    display: grid;
+    grid-template-columns: 1fr 256px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 0 234px;
+  }
+}
+
 .stocks-form__input {
   padding: 13px 13px 11px;
   width: 100%;
@@ -7,6 +19,14 @@
   text-transform: uppercase;
   border: 1px solid #cdcdcd;
   margin-bottom: 16px;
+
+  @media (min-width: $width-tablet) {
+    margin: 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 12px;
+  }
 }
 
 .stocks-form__button {

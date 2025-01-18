@@ -1,14 +1,37 @@
 .stocks {
+  position: relative;
+}
+
+.stocks__container {
   padding-bottom: 40px;
   line-height: 24px;
   color: #000000;
+
+  @media (min-width: $width-tablet) {
+    padding-bottom: 81px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 103px;
+  }
 }
 
 .stocks__heading {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 31px;
   font-size: 24px;
   font-weight: 400;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 66px;
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 73px;
+    font-size: 40px;
+  }
 }
 
 .stocks__text {
@@ -16,4 +39,15 @@
   font-size: 16px;
   text-align: center;
   margin-bottom: 24px;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 24px;
+    padding: 0 80px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 0 234px;
+  }
 }

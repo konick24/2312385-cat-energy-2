@@ -75,13 +75,20 @@
   }
 
   @media (min-width: $width-desktop) {
-    color: #ffffff;
     padding: 16px 0 13px;
+
+    .page-header__container--index & {
+      color: #ffffff;
+    }
+
 
     &--current::after {
       left: 0;
       right: 0;
       bottom: 5px;
+    }
+
+    .page-header__container--index &--current::after {
       background-color: #ffffff;
     }
 

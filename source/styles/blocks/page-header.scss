@@ -1,6 +1,9 @@
 .page-header {
-  padding: 13px 0 11px;
   position: relative;
+}
+
+.page-header__container {
+  padding: 13px 0 11px;
 
   @media (max-width: $width-only-mobile) {
     background-image: url("../../images/logo-text-mobile.svg");
@@ -11,24 +14,16 @@
 
   @media (min-width: $width-tablet) {
     padding: 25px 0;
-  }
-
-  @media (min-width: $width-desktop) {
-    padding: 55px 0 29px;
-  }
-}
-
-.page-header__container {
-  @media (min-width: $width-tablet) {
     display: flex;
     justify-content: space-between;
     align-items: start;
   }
 
-  // @media (min-width: $width-desktop) {
-  //   position: absolute;
-  //   top: 55px;
-  //   left: 0;
-  //   right: 0;
-  // }
+  @media (min-width: $width-desktop) {
+    padding: 55px 0 29px;
+
+    &--index {
+      margin-bottom: -143px;
+    }
+  }
 }

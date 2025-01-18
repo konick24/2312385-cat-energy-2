@@ -24,4 +24,10 @@
       padding: 40px 30px 84px;
     }
   }
+
+  @media (min-width: $width-desktop) {
+    &--catalog {
+      padding: 44px 110px 84px;
+    }
+  }
 }

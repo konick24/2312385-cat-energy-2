@@ -1,5 +1,6 @@
 .promo {
   @media (max-width: $width-only-mobile) {
+    text-align: center;
     color: #ffffff;
     background-image:
       url("../../images/bg-promo-cat-mobile@1x.png"),
@@ -17,9 +18,9 @@
   }
 
   @media (min-width: $width-desktop) {
-    margin: -143px auto 0;
+    margin: 0 auto;
     width: $width-desktop;
-    padding: 145px 0 39px;
+    padding: 145px 0 79px;
     background-image:
       url("../../images/bg-promo-cat-desktop@1x.png"),
       linear-gradient(to right, #ffffff 50%, #1e221b 50%);
