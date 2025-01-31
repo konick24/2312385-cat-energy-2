@@ -1,1 +1,0 @@
-var t=document.querySelector(".nav__button"),n=document.querySelector(".nav__list"),s=document.querySelector(".nav");s.classList.remove("nav--no-js");t.addEventListener("click",e=>{e.preventDefault(),t.classList.toggle("nav__button--opened"),t.classList.toggle("nav__button--closed"),n.classList.toggle("site-list--opened")});
