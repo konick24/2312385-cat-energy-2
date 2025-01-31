@@ -2,6 +2,10 @@
   @media (min-width: $width-tablet) {
     border-bottom: 1px solid #e6e6e6;
   }
+
+  @media (min-width: $width-desktop) {
+    border: none;
+  }
 }
 
 .process__container {
@@ -9,6 +13,10 @@
 
   @media (min-width: $width-tablet) {
     padding-bottom: 64px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 86px;
   }
 }
 
@@ -82,7 +90,8 @@
 
   @media (min-width: $width-tablet) {
     margin: 0;
-    padding: 151px 80px 40px 0;
+    margin-right: 75px;
+    padding: 151px 0 40px;
     counter-increment: process;
 
     &::before {
@@ -95,7 +104,22 @@
     &::after {
       content: counter(process);
       position: absolute;
-      background-size: contain;
+      top: 0;
+      right: 0;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 1;
+      color: $basic-grey;
+      z-index: -1;
+      width: 136px;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-right: 0;
+
+    &::after {
+      text-align: center;
     }
   }
 }

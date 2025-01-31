@@ -3,6 +3,13 @@
   width: 100%;
   top: 65px;
   left: 0;
+  z-index: 2;
+
+  @media (max-width: $width-only-mobile) {
+    &--no-js {
+      position: static;
+    }
+  }
 
   @media (min-width: $width-tablet) {
     position: static;
@@ -23,6 +30,12 @@
   height: 24px;
   border: none;
   background-color: #ffffff;
+
+  @media (max-width: $width-only-mobile) {
+    .nav--no-js & {
+      display: none;
+    }
+  }
 
   &--closed {
     right: 13px;

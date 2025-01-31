@@ -15,14 +15,16 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__container page-header__container--index container">
-      <a class="page-header__logo logo" href="#">
-        <picture>
-          <source media="(min-width: 1330px)" width="202" height="59" type="image/svg+xml" srcset="./images/logo-desktop.svg">
-          <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="./images/logo-tablet.svg">
-          <img class="logo__icon" src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Cat-Energy">
-        </picture>
-      </a>
-      <nav class="page-header__nav nav">
+      <div class="page-header__top-bar top-bar">
+        <a class="page-header__logo logo" href="#">
+          <picture>
+            <source media="(min-width: 1330px)" width="202" height="59" type="image/svg+xml" srcset="./images/logo-desktop.svg">
+            <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="./images/logo-tablet.svg">
+            <img class="logo__icon" src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Cat-Energy">
+          </picture>
+        </a>
+      </div>
+      <nav class="page-header__nav nav nav--no-js">
         <button class="nav__button nav__button--opened" type="button">
           <span class="visually-hidden">Открыть меню сайта</span>
         </button>
@@ -43,14 +45,13 @@
   <main class="page-main">
     <section class="page-main__section promo">
       <div class="promo__container container">
-        <h1 class="page-main__heading promo__heading">Функциональное питание для котов</h1>
-        <p class="promo__text">Занялся собой? Займись котом!</p>
-        <picture>
-          <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="./images/bg-promo-eat-desktop@1x.png 1x, ./images/bg-promo-eat-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="./images/bg-promo-eat-tablet@1x.png 1x, ./images/bg-promo-eat-tablet@2x.png 2x">
-          <img class="promo__pic" src="./images/bg-promo-eat-mobile@1x.png" width="280" height="270" srcset="./images/bg-promo-eat-mobile@2x.png 2x" alt="Питание для котов Cat-Energy">
-        </picture>
-        <a class="promo__button button" href="#">Подобрать программу</a>
+        <div class="promo__content">
+          <h1 class="page-main__heading promo__heading">Функциональное питание для котов</h1>
+          <p class="promo__text">Занялся собой? Займись котом!</p>
+        </div>
+        <div class="promo__buttons">
+          <a class="promo__button button" href="#">Подобрать программу</a>
+        </div>
       </div>
     </section>
     <section class="page-main__section programs">
@@ -101,37 +102,39 @@
     </section>
     <section class="page-main__section example">
       <div class="example__container container">
-        <div class="example__content">
-          <h2 class="page-main__heading example__heading">Живой пример</h2>
-          <p class="example__text">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-          </p>
-          <dl class="example__list">
-            <div class="example__item">
-              <dt class="example__title">Снижение веса</dt>
-              <dd class="example__definition">5 кг</dd>
-            </div>
+        <h2 class="page-main__heading example__heading"><span>Живой пример</span></h2>
+        <div class="example__wrapper">
+          <div class="example__content">
+            <p class="example__text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
+            <dl class="example__list">
+              <div class="example__item">
+                <dt class="example__title">Снижение веса</dt>
+                <dd class="example__definition">5 кг</dd>
+              </div>
 
-            <div class="example__item">
-              <dt class="example__title">Затрачено времени</dt>
-              <dd class="example__definition">60 дней</dd>
+              <div class="example__item">
+                <dt class="example__title">Затрачено времени</dt>
+                <dd class="example__definition">60 дней</dd>
+              </div>
+            </dl>
+            <p class="example__spending">
+              <span class="example__expenses">Затраты на питание:</span>
+              <span class="example__total">15 000 руб.</span>
+            </p>
+          </div>
+          <div class="example__view">
+            <div hidden>
+              <picture>
+                <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="./images/cat-before-large@1x.png 1x, ./images/cat-before-large@2x.png 2x">
+                <img class="example__pic" src="./images/cat-before-small@1x.png" width="280" height="256" srcset="./images/cat-before-small@2x.png 2x" alt="Вид кота 'До'">
+              </picture>
+              <picture>
+                <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="./images/cat-after-large@1x.png 1x, ./images/cat-after-large@2x.png 2x">
+                <img class="example__pic" src="./images/cat-after-small@1x.png" width="280" height="256" srcset="./images/cat-after-small@2x.png 2x" alt="Вид кота 'После'">
+              </picture>
             </div>
-          </dl>
-          <p class="example__spending">
-            <span class="example__expenses">Затраты на питание:</span>
-            <span class="example__total">15 000 руб.</span>
-          </p>
-        </div>
-        <div class="example__view" style="width: 280px; height: 256px;">
-          <div hidden>
-            <picture>
-              <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="./images/cat-before-large@1x.png 1x, ./images/cat-before-large@2x.png 2x">
-              <img class="example__pic" src="./images/cat-before-small@1x.png" width="280" height="256" srcset="./images/cat-before-small@2x.png 2x" alt="Вид кота 'До'">
-            </picture>
-            <picture>
-              <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="./images/cat-after-large@1x.png 1x, ./images/cat-after-large@2x.png 2x">
-              <img class="example__pic" src="./images/cat-after-small@1x.png" width="280" height="256" srcset="./images/cat-after-small@2x.png 2x" alt="Вид кота 'После'">
-            </picture>
           </div>
         </div>
       </div>

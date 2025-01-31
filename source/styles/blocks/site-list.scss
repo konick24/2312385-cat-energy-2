@@ -10,6 +10,12 @@
   border-top: 1px solid #e6e6e6;
   background-color: #ffffff;
 
+  @media (max-width: $width-only-mobile) {
+    .nav--no-js & {
+      display: block;
+    }
+  }
+
   &--opened {
     display: block;
   }
@@ -21,6 +27,7 @@
     flex-wrap: wrap;
     font-size: 18px;
     line-height: 24px;
+    background-color: transparent;
     border: none;
   }
 
