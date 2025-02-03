@@ -1,10 +1,21 @@
 .container {
   margin: 0 20px;
 
+  @media (min-width: $width-tablet) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.container__heading {
   &--line::after {
     content: "";
     position: absolute;
-    top: 8px;
+    top: 10px;
     left: 0;
     right: 0;
     height: 2px;
@@ -19,8 +30,6 @@
   }
 
   @media (min-width: $width-tablet) {
-    margin: 0 30px;
-
     &--line::after {
       top: 14px;
     }
@@ -31,9 +40,6 @@
   }
 
   @media (min-width: $width-desktop) {
-    margin: 0 auto;
-    width: 1220px;
-
     &--line::after {
       top: 18px;
     }

@@ -3,7 +3,7 @@
 }
 
 .additionally__container {
-  padding-bottom: 42px;
+  padding-bottom: 40px;
 
   @media (min-width: $width-tablet) {
     padding-bottom: 80px;
@@ -11,7 +11,7 @@
 
   @media (min-width: $width-desktop) {
     display: grid;
-    padding-bottom: 96px;
+    padding-bottom: 95px;
     grid-template-columns: 1fr 245px;
     column-gap: 80px;
   }
@@ -19,7 +19,7 @@
 
 .additionally__heading {
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 35px;
   font-size: 24px;
   line-height: 1;
   font-weight: 400;
@@ -38,14 +38,14 @@
 
 .additionally__list {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
   padding: 0;
   list-style: none;
   border-top: 1px solid #cdcdcd;
   border-bottom: 1px solid #cdcdcd;
 
   @media (min-width: $width-tablet) {
-    margin-bottom: 71px;
+    margin-bottom: 70px;
     border: 1px solid #cdcdcd;
   }
 

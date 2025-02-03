@@ -49,7 +49,7 @@
 
 .site-list__link {
   display: block;
-  padding: 22px 0 23px;
+  padding: 22px 15px 23px;
   text-decoration: none;
   color: #000000;
 
@@ -99,16 +99,16 @@
       background-color: #ffffff;
     }
 
-    &:hover {
+    .page-header__container--index &:hover {
       color: rgba(255, 255, 255, 0.6);
     }
 
-    &:focus {
+    .page-header__container--index &:focus {
       outline: none;
       color: rgba(255, 255, 255, 0.6);
     }
 
-    &:active {
+    .page-header__container--index &:active {
       color: rgba(255, 255, 255, 0.3);
     }
   }

@@ -21,10 +21,27 @@
 
   &:hover {
     opacity: 0.6;
+
+    &::after {
+      background-color: $basic-green;
+    }
   }
 
-  &:hover::after {
-    background-color: $basic-green;
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      background-color: $basic-green;
+    }
   }
 
   @media (min-width: $width-tablet) {

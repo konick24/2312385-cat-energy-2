@@ -12,16 +12,6 @@
   margin: 0;
   position: relative;
 
-  // &::before {
-
-  // }
-
-  // @media (min-resolution: 2dppx) {
-  //   &::before {
-  //     background-image: url("../../images/bg-promo-eat-mobile@2x.png");
-  //   }
-  // }
-
   @media (min-width: $width-tablet) {
     padding: 40px 0 30px 120px;
   }
@@ -59,12 +49,6 @@
       opacity: 0.85;
       z-index: -2;
     }
-
-    // @media (min-resolution: 2dppx) {
-    //   &::before {
-    //     background-image: url("../../images/bg-promo-eat-desktop@2x.png");
-    //   }
-    // }
   }
 }
 
@@ -182,14 +166,14 @@
   line-height: 14px;
   text-transform: uppercase;
 
+  & + & {
+    margin-top: 20px;
+  }
+
   @media (min-width: $width-tablet) {
     width: 72%;
     font-size: 20px;
     line-height: 20px;
-
-    & + & {
-      margin-top: 20px;
-    }
   }
 
   @media (min-width: $width-desktop) {
@@ -233,15 +217,15 @@
 }
 
 .promo__button {
+  & + & {
+    margin-top: 20px;
+  }
+
   @media (min-width: $width-tablet) {
     padding: 14px 26px;
     width: 242px;
     font-size: 20px;
     line-height: 26px;
-
-    & + & {
-      margin-top: 20px;
-    }
   }
 
   @media (min-width: $width-desktop) {
