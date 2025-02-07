@@ -73,7 +73,7 @@
     margin: 0 30px 99px;
     display: grid;
     grid-template-columns: 367px 1fr;
-    row-gap: 55px;
+    gap: 55px 30px;
   }
 
   @media (min-width: $width-desktop) {
@@ -200,11 +200,15 @@
 
 .example__expenses {
   text-align: start;
+
+  @media (min-width: $width-desktop) {
+    width: 171px;
+  }
 }
 
 .example__total {
   @media (min-width: $width-desktop) {
-    min-width: 204px;
+    width: 204px;
   }
 }
 

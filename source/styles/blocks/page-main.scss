@@ -27,7 +27,9 @@
 
   @media (min-width: $width-desktop) {
     &--catalog {
-      padding: 44px 110px 84px;
+      margin: 0 auto;
+      padding: 44px 0 84px;
+      width: 1220px;
     }
   }
 }

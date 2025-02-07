@@ -84,8 +84,22 @@
 }
 
 .show-more__button {
-  background-color: #f2f2f2;
+  background-color: $basic-grey;
   color: $text-color;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:focus {
+    color: $text-color;
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: $text-color;
+    background-color: #ebebeb;
+  }
 
   @media (min-width: $width-tablet) {
     margin-top: auto;

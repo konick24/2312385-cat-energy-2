@@ -31,10 +31,10 @@
 
 .page-header__container {
   @media (max-width: $width-only-mobile) {
-    margin: 0;
-  }
+    // margin: 0;
+    margin: 0 20px;
+    padding: 13px 0 11px;
 
-  @media (max-width: $width-only-mobile) {
     background-image: url("../../images/logo-text-mobile.svg");
     background-repeat: no-repeat;
     background-position: 50% 23px;
@@ -57,9 +57,8 @@
   }
 }
 
-.page-header__top-bar {
-  @media (max-width: $width-only-mobile) {
-    margin: 0 20px;
-    padding: 13px 0 11px;
-  }
-}
+// .page-header__top-bar {
+//   @media (max-width: $width-only-mobile) {
+
+//   }
+// }

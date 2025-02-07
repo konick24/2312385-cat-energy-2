@@ -167,12 +167,11 @@
 
 
 .programs__button {
-  width: max-content;
-  display: grid;
-  grid-template-columns: max-content 26px;
-  gap: 16px;
-  align-items: center;
-  padding: 10px 0;
+  position: relative;
+  display: inline-block;
+  // width: max-content;
+  // max-width: 126px;
+  padding: 10px 48px 10px 0;
   line-height: 16px;
   color: #000000;
   text-decoration: none;
@@ -182,6 +181,9 @@
 
   &::after {
     content: "";
+    position: absolute;
+    inset: 0 0 0 calc(100% - 32px);
+    margin: auto 0;
     width: 24px;
     height: 10px;
     background-image: url("../../icons/stack.svg#icon-arrow");
@@ -191,16 +193,16 @@
   }
 
   &:hover {
-    grid-template-columns: max-content 32px;
     background-color: transparent;
+    transition: 0.1s;
 
     &::after {
       width: 32px;
+      transition: 0.1s;
     }
   }
 
   &:focus {
-    grid-template-columns: max-content 32px;
     background-color: transparent;
 
     &::after {
@@ -214,8 +216,19 @@
   }
 
   @media (min-width: $width-tablet) {
+    padding-right: 49px;
+    max-width: 156px;
     font-size: 20px;
     line-height: 30px;
-    gap: 25px;
+
+    &:hover {
+      max-width: 164px;
+      padding-right: 57px;
+    }
+
+    &:focus {
+      max-width: 164px;
+      padding-right: 57px;
+    }
   }
 }
