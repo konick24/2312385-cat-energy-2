@@ -27,13 +27,18 @@
       width: 100%;
       height: 693px;
       background-image:
-        url("../../images/bg-promo-cat-desktop@1x.png"),
+        image-set(
+          url("../../images/bg-promo-cat-desktop@1x.webp") type("image/webp") 1x,
+          url("../../images/bg-promo-cat-desktop@2x.webp") type("image/webp") 2x,
+          url("../../images/bg-promo-cat-desktop@1x.png") type("image/png") 1x,
+          url("../../images/bg-promo-cat-desktop@2x.png") type("image/png") 2x
+        ),
         linear-gradient(to right, #ffffff 50%, #515056 50%);
       background-repeat: no-repeat;
       background-size: auto 100%, auto 100%;
       background-position: 100% 0, 100% 0;
       bottom: 0;
-      left: 1px;
+      left: 0;
       right: 0;
       z-index: -2;
     }
@@ -43,7 +48,7 @@
       position: absolute;
       height: 693px;
       bottom: 0;
-      left: 50%;
+      left: calc(50% - 1px);
       right: 0;
       background-color: $basic-green;
       opacity: 0.85;
@@ -61,16 +66,17 @@
     text-align: center;
     color: #ffffff;
     background-image:
-      url("../../images/bg-promo-cat-mobile@1x.png"),
+      image-set(
+        url("../../images/bg-promo-cat-mobile@1x.webp") type("image/webp") 1x,
+        url("../../images/bg-promo-cat-mobile@2x.webp") type("image/webp") 2x,
+        url("../../images/bg-promo-cat-mobile@1x.png") type("image/png") 1x,
+        url("../../images/bg-promo-cat-mobile@2x.png") type("image/png") 2x
+      ),
       linear-gradient(to right, #515055, #434247);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 100%;
     background-position: 50% 50%;
     z-index: 0;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/bg-promo-cat-mobile@2x.png");
-    }
 
     &::before {
       content: "";
@@ -91,17 +97,19 @@
     position: absolute;
     width: 280px;
     height: 270px;
-    background-image: url("../../images/bg-promo-eat-mobile@1x.png");
+    background-image:
+      image-set(
+        url("../../images/bg-promo-eat-mobile@1x.webp") type("image/webp") 1x,
+        url("../../images/bg-promo-eat-mobile@2x.webp") type("image/webp") 2x,
+        url("../../images/bg-promo-eat-mobile@1x.png") type("image/png") 1x,
+        url("../../images/bg-promo-eat-mobile@2x.png") type("image/png") 2x
+      );
     background-size: 280px 270px;
     background-repeat: no-repeat;
     left: 0;
     right: 0;
     bottom: -135px;
     margin: 0 auto;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/bg-promo-eat-mobile@2x.png");
-    }
   }
 
   @media (min-width: $width-tablet) {
@@ -110,29 +118,31 @@
     &::after {
       width: 709px;
       height: 609px;
-      background-image: url("../../images/bg-promo-eat-tablet@1x.png");
+      background-image:
+        image-set(
+          url("../../images/bg-promo-eat-tablet@1x.webp") type("image/webp") 1x,
+          url("../../images/bg-promo-eat-tablet@2x.webp") type("image/webp") 2x,
+          url("../../images/bg-promo-eat-tablet@1x.png") type("image/png") 1x,
+          url("../../images/bg-promo-eat-tablet@2x.png") type("image/png") 2x
+        );
       background-size: 709px 609px;
       left: -120px;
       bottom: -630px;
       z-index: -1;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../../images/bg-promo-eat-tablet@2x.png");
-      }
     }
   }
 
   @media (min-width: $width-desktop) {
     position: static;
 
-    @media (min-resolution: 2dppx) {
-      background-image:
-        url("../../images/bg-promo-cat-desktop@2x.png"),
-        linear-gradient(to right, #ffffff 50%, #515056 50%);
-    }
-
     &::after {
-      background-image: url("../../images/bg-promo-eat-desktop@1x.png");
+      background-image:
+        image-set(
+          url("../../images/bg-promo-eat-desktop@1x.webp") type("image/webp") 1x,
+          url("../../images/bg-promo-eat-desktop@2x.webp") type("image/webp") 2x,
+          url("../../images/bg-promo-eat-desktop@1x.png") type("image/png") 1x,
+          url("../../images/bg-promo-eat-desktop@2x.png") type("image/png") 2x
+        );
       background-size: 552px 499px;
       bottom: 51px;
       left: 225px;
@@ -143,26 +153,25 @@
 }
 
 .promo__heading {
-  margin: 0;
-  margin-bottom: 25px;
+  margin: 0 auto 25px;
+  width: 250px;
   padding: 0;
   color: #ffffff;
 
   @media (min-width: $width-tablet) {
-    margin-bottom: 40px;
+    margin: 0 0 40px;
     width: 72%;
     color: #000000;
   }
 
   @media (min-width: $width-desktop) {
-    margin-bottom: 40px;
     width: 45%;
-    color: #000000;
   }
 }
 
 .promo__text {
-  margin: 0;
+  margin: 0 auto;
+  width: 249px;
   line-height: 14px;
   text-transform: uppercase;
 
@@ -171,6 +180,7 @@
   }
 
   @media (min-width: $width-tablet) {
+    margin: 0;
     width: 72%;
     font-size: 20px;
     line-height: 20px;

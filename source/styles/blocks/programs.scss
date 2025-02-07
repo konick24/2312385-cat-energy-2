@@ -168,9 +168,10 @@
 
 .programs__button {
   position: relative;
-  width: max-content;
-  max-width: 126px;
-  padding: 10px 40px 10px 0;
+  display: inline-block;
+  // width: max-content;
+  // max-width: 126px;
+  padding: 10px 48px 10px 0;
   line-height: 16px;
   color: #000000;
   text-decoration: none;
@@ -181,9 +182,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0 0 0 calc(100% - 32px);
     margin: auto 0;
     width: 24px;
     height: 10px;
@@ -194,8 +193,6 @@
   }
 
   &:hover {
-    max-width: 134px;
-    padding-right: 48px;
     background-color: transparent;
     transition: 0.1s;
 
@@ -206,8 +203,6 @@
   }
 
   &:focus {
-    max-width: 134px;
-    padding-right: 48px;
     background-color: transparent;
 
     &::after {
