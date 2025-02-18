@@ -1,5 +1,5 @@
 .social {
-  padding: 40px 0 37px;
+  padding: 40px 0 23px;
 
   @media (min-width: $width-tablet) {
     padding: 54px 0;
@@ -13,7 +13,7 @@
 .social__container {
   @media (min-width: $width-tablet) {
     display: grid;
-    grid-template-columns: repeat(3, 168px);
+    grid-template-columns: repeat(3, 162px);
     align-items: start;
     justify-content: space-between;
   }
@@ -60,7 +60,7 @@
   justify-content: center;
 
   @media (max-width: $width-only-mobile) {
-    margin-bottom: 17px;
+    margin-bottom: 20px;
     border-top: 1px solid #d9d9d9;
     border-bottom: 1px solid #d9d9d9;
   }

@@ -9,7 +9,7 @@
       position: absolute;
       height: 600px;
       top: 0;
-      left: 50%;
+      left: calc(50% - 1px);
       right: 0;
       background-image: linear-gradient(to right, #4c4b4f, #4a494d, #403f44);
       z-index: -3;
@@ -20,7 +20,7 @@
       position: absolute;
       height: 600px;
       top: 0;
-      left: 50%;
+      left: calc(50% - 1px);
       right: 0;
       background-color: $basic-green;
       opacity: 0.85;
@@ -31,10 +31,7 @@
 
 .page-header__container {
   @media (max-width: $width-only-mobile) {
-    // margin: 0;
-    margin: 0 20px;
-    padding: 13px 0 11px;
-
+    margin: 0;
     background-image: url("../../images/logo-text-mobile.svg");
     background-repeat: no-repeat;
     background-position: 50% 23px;
@@ -57,8 +54,16 @@
   }
 }
 
-// .page-header__top-bar {
-//   @media (max-width: $width-only-mobile) {
+.page-header__bar {
+  margin: 0 20px;
+  padding: 13px 0 11px;
 
-//   }
-// }
+  @media (min-width: $width-tablet) {
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    z-index: 2;
+  }
+}

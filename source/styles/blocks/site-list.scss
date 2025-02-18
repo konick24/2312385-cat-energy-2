@@ -42,6 +42,10 @@
 .site-list__item {
   border-bottom: 1px solid #e6e6e6;
 
+  .nav--no-js &:last-child {
+    border-bottom: none;
+  }
+
   @media (min-width: $width-tablet) {
     border: none;
   }
@@ -87,7 +91,6 @@
     .page-header__container--index & {
       color: #ffffff;
     }
-
 
     &--current::after {
       left: 0;

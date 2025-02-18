@@ -1,6 +1,7 @@
 .copyright {
-  padding: 10px 0;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   font-family: $secondary-text;
   font-size: 16px;
@@ -8,49 +9,31 @@
   text-decoration: none;
   color: $text-color;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: calc(50% - 17px);
-    right: 0;
-    width: 27px;
-    height: 34px;
-    mask-image: url("../../icons/stack.svg#icon-html-academy");
-    background-color: #666666;
+  &__logo {
+    color: #666666;
   }
 
-  &:hover {
-    opacity: 0.6;
-
-    &::after {
-      background-color: $basic-green;
-    }
+  &:hover .copyright__logo {
+    color: $basic-green;
   }
 
   &:focus {
-    opacity: 0.6;
     outline: none;
 
-    &::after {
-      background-color: $basic-green;
+    & .copyright__logo {
+      color: $basic-green;
     }
   }
 
   &:active {
     opacity: 0.3;
 
-    &::after {
-      background-color: $basic-green;
+    & .copyright__logo {
+      color: $basic-green;
     }
   }
 
   @media (min-width: $width-tablet) {
-    margin: 0;
-    margin-right: auto;
-    padding-left: 6px;
-
-    &::after {
-      right: -51px;
-    }
+    margin-top: 2px;
   }
 }
