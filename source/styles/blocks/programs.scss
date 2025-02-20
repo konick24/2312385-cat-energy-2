@@ -169,8 +169,6 @@
 .programs__button {
   position: relative;
   display: inline-block;
-  // width: max-content;
-  // max-width: 126px;
   padding: 10px 48px 10px 0;
   line-height: 16px;
   color: #000000;
@@ -221,14 +219,8 @@
     font-size: 20px;
     line-height: 30px;
 
-    &:hover {
-      max-width: 164px;
-      padding-right: 57px;
-    }
-
-    &:focus {
-      max-width: 164px;
-      padding-right: 57px;
+    &::after {
+      inset: 0 0 0 calc(100% - 24px);
     }
   }
 }

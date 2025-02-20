@@ -24,6 +24,7 @@
 .product__title {
   margin: 0;
   margin-bottom: 14px;
+  width: 90px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -35,7 +36,8 @@
   }
 
   @media (min-width: $width-tablet) {
-    margin: 28px 0 13px;
+    margin: 28px auto 13px;
+    width: 130px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -50,7 +52,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    margin: 19px 0 17px;
+    margin: 19px auto 17px;
   }
 }
 

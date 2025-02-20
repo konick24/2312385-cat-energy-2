@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <title>Cat-Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico"><!-- 16x16 -->
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./favicons/180x180.png">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -12,14 +17,16 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__container container">
-      <a class="page-header__logo logo" href="#">
-        <picture>
-          <source media="(min-width: 1440px)" width="202" height="59" type="image/svg+xml" srcset="./images/logo-desktop.svg">
-          <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="./images/logo-tablet.svg">
-          <img class="logo__icon" src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Cat-Energy">
-        </picture>
-      </a>
-      <nav class="page-header__nav nav">
+      <div class="page-header__bar">
+        <a class="page-header__logo logo" href="#">
+          <picture>
+            <source media="(min-width: 1330px)" width="202" height="59" type="image/svg+xml" srcset="./images/logo-desktop.svg">
+            <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="./images/logo-tablet.svg">
+            <img class="logo__icon" src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Cat-Energy">
+          </picture>
+        </a>
+      </div>
+      <nav class="page-header__nav nav nav--no-js">
         <button class="nav__button nav__button--opened" type="button">
           <span class="visually-hidden">Открыть меню сайта</span>
         </button>
@@ -54,7 +61,7 @@
               <img class="product__pic" src="./images/product-1-small@1x.png" srcset="./images/product-1-small@2x.png 2x" width="68" height="86" alt="Cat Energy PRO 500 г со вкусом курицы">
             </picture>
             <div class="product__info">
-              <h3 class="product__title">Cat Energy <br>PRO<br> 500 г</h3>
+              <h3 class="product__title">Cat Energy PRO 500 г</h3>
               <dl class="product__list">
                 <div class="product__item">
                   <dt class="product__term">Масса</dt>
@@ -83,7 +90,7 @@
               <img class="product__pic" src="./images/product-2-small@1x.png" srcset="./images/product-2-small@2x.png 2x" width="84" height="100" alt="Cat Energy PRO 1000 г со вкусом курицы">
             </picture>
             <div class="product__info">
-              <h3 class="product__title">Cat Energy <br>PRO<br> 1000 г</h3>
+              <h3 class="product__title">Cat Energy PRO 1000 г</h3>
               <dl class="product__list">
                 <div class="product__item">
                   <dt class="product__term">Масса</dt>
@@ -112,7 +119,7 @@
               <img class="product__pic" src="./images/product-3-small@1x.png" srcset="./images/product-3-small@2x.png 2x" width="68" height="78" alt="Cat Energy PRO 500 г со вкусом рыбы">
             </picture>
             <div class="product__info">
-              <h3 class="product__title">Cat Energy <br>PRO<br> 500 г</h3>
+              <h3 class="product__title">Cat Energy PRO 500 г</h3>
               <dl class="product__list">
                 <div class="product__item">
                   <dt class="product__term">Масса</dt>
@@ -141,7 +148,7 @@
               <img class="product__pic" src="./images/product-4-small@1x.png" srcset="./images/product-4-small@2x.png 2x" width="84" height="100" alt="Cat Energy PRO 1000 г со вкусом Рыбы">
             </picture>
             <div class="product__info">
-              <h3 class="product__title">Cat Energy <br>PRO<br> 1000 г</h3>
+              <h3 class="product__title">Cat Energy PRO 1000 г</h3>
               <dl class="product__list">
                 <div class="product__item">
                   <dt class="product__term">Масса</dt>
@@ -170,7 +177,7 @@
               <img class="product__pic" src="./images/product-5-small@1x.png" srcset="./images/product-5-small@2x.png 2x" width="68" height="78" alt="Cat Energy slim 500 г со вкусом гречки">
             </picture>
             <div class="product__info">
-              <h3 class="product__title">Cat Energy <br>slim<br> 500 г</h3>
+              <h3 class="product__title">Cat Energy slim 500 г</h3>
               <dl class="product__list">
                 <div class="product__item">
                   <dt class="product__term">Масса</dt>
@@ -199,7 +206,7 @@
               <img class="product__pic" src="./images/product-6-small@1x.png" srcset="./images/product-6-small@2x.png 2x" width="84" height="100" alt="Cat Energy slim 1000 г со вкусом гречки">
             </picture>
             <div class="product__info">
-              <h3 class="product__title">Cat Energy <br>slim<br> 1000 г</h3>
+              <h3 class="product__title">Cat Energy slim 1000 г</h3>
               <dl class="product__list">
                 <div class="product__item">
                   <dt class="product__term">Масса</dt>
@@ -228,7 +235,7 @@
               <img class="product__pic" src="./images/product-7-small@1x.png" srcset="./images/product-7-small@2x.png 2x" width="72" height="84" alt="Cat Energy slim 500 г со вкусом риса">
             </picture>
             <div class="product__info">
-              <h3 class="product__title">Cat Energy <br>slim<br> 500 г</h3>
+              <h3 class="product__title">Cat Energy slim 500 г</h3>
               <dl class="product__list">
                 <div class="product__item">
                   <dt class="product__term">Масса</dt>
@@ -380,7 +387,10 @@
         </ul>
         <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">Разработано в</span>
-          HTML Academy
+          <span class="copyright__text">HTML Academy</span>
+          <svg class="copyright__logo" width="27" height="34">
+            <use href="./icons/stack.svg#icon-html-academy"></use>
+          </svg>
         </a>
       </div>
     </section>

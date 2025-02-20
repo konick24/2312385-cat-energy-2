@@ -8,6 +8,8 @@
   <link rel="icon" href="favicon.ico"><!-- 16x16 -->
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./favicons/180x180.png">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -15,14 +17,15 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__container page-header__container--index container">
-      <a class="page-header__logo logo" href="#">
-        <picture>
-          <source media="(min-width: 1330px)" width="202" height="59" type="image/svg+xml" srcset="./images/logo-desktop.svg">
-          <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="./images/logo-tablet.svg">
-          <img class="logo__icon" src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Cat-Energy">
-        </picture>
-      </a>
-
+      <div class="page-header__bar">
+        <a class="page-header__logo logo" href="#">
+          <picture>
+            <source media="(min-width: 1330px)" width="202" height="59" type="image/svg+xml" srcset="./images/logo-desktop.svg">
+            <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="./images/logo-tablet.svg">
+            <img class="logo__icon" src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Cat-Energy">
+          </picture>
+        </a>
+      </div>
       <nav class="page-header__nav nav nav--no-js">
         <button class="nav__button nav__button--opened" type="button">
           <span class="visually-hidden">Открыть меню сайта</span>
@@ -124,21 +127,28 @@
             </p>
           </div>
           <div class="example__view">
-            <div hidden>
-              <picture>
-                <source media="(min-width: 768px)" width="560" height="512" type="image/webp" srcset="./images/cat-before-large@1x.webp 1x, ./images/cat-before-large@2x.webp 2x">
-                <source width="280" height="256" type="image/webp" srcset="./images/cat-before-small@1x.webp 1x, ./images/cat-before-small@2x.webp 2x">
+            <div class="example__slider slider">
+              <button class="slider__button" type="button">
+                <span class="visually-hidden">Ползунок слайдера</span>
+              </button>
+              <div class="slider__wrapper-before">
+                <picture>
+                  <!-- <source media="(min-width: 768px)" width="560" height="512" type="image/webp" srcset="./images/cat-before-large@1x.webp 1x, ./images/cat-before-large@2x.webp 2x">
+                  <source width="280" height="256" type="image/webp" srcset="./images/cat-before-small@1x.webp 1x, ./images/cat-before-small@2x.webp 2x"> -->
 
-                <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="./images/cat-before-large@1x.png 1x, ./images/cat-before-large@2x.png 2x">
-                <img class="example__pic" src="./images/cat-before-small@1x.png" width="280" height="256" srcset="./images/cat-before-small@2x.png 2x" alt="Вид кота 'До'" loading="lazy">
-              </picture>
-              <picture>
-                <source media="(min-width: 768px)" width="560" height="512" type="image/webp" srcset="./images/cat-before-large@1x.webp 1x, ./images/cat-before-large@2x.webp 2x">
-                <source width="280" height="256" type="image/webp" srcset="./images/cat-before-small@1x.webp 1x, ./images/cat-before-small@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="./images/cat-before-large@1x.png 1x, ./images/cat-before-large@2x.png 2x">
+                  <img class="slider__image slider__image--before" src="./images/cat-before-small@1x.png" width="280" height="256" srcset="./images/cat-before-small@2x.png 2x" alt="Вид кота 'До'" loading="lazy">
+                </picture>
+              </div>
+              <div class="slider__wrapper-after">
+                <picture>
+                  <!-- <source media="(min-width: 768px)" width="560" height="512" type="image/webp" srcset="./images/cat-before-large@1x.webp 1x, ./images/cat-before-large@2x.webp 2x">
+                  <source width="280" height="256" type="image/webp" srcset="./images/cat-before-small@1x.webp 1x, ./images/cat-before-small@2x.webp 2x"> -->
 
-                <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="./images/cat-after-large@1x.png 1x, ./images/cat-after-large@2x.png 2x">
-                <img class="example__pic" src="./images/cat-after-small@1x.png" width="280" height="256" srcset="./images/cat-after-small@2x.png 2x" alt="Вид кота 'После'" loading="lazy">
-              </picture>
+                  <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="./images/cat-after-large@1x.png 1x, ./images/cat-after-large@2x.png 2x">
+                  <img class="slider__image slider__image--after" src="./images/cat-after-small@1x.png" width="280" height="256" srcset="./images/cat-after-small@2x.png 2x" alt="Вид кота 'После'" loading="lazy">
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -196,12 +206,14 @@
         </ul>
         <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">Разработано в</span>
-          HTML Academy
+          <span class="copyright__text">HTML Academy</span>
+          <svg class="copyright__logo" width="27" height="34">
+            <use href="./icons/stack.svg#icon-html-academy"></use>
+          </svg>
         </a>
       </div>
     </section>
   </footer>
-  <script src="./scripts/add.js"></script>
 </body>
 
 </html>
